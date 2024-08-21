@@ -1,64 +1,53 @@
 import 'package:flutter/material.dart';
-
-void main() {
+void main(){
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-            title: (Text("Gretting App")),
-          ),
-          body: HomePage(),
-        ));
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('dtgh'),
+        ),
+        body: MyHome(),
+      ),
+    );
   }
 }
+class MyHome extends StatelessWidget {
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            'Hello, World!',
-            style: TextStyle(
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text('"Welcome to Flutter!'),
-          SizedBox(
-            height: 20,
-          ),
-          Image.asset('assets/images/download.jpg'),
-          SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              final snackbar = SnackBar(content: Text('Button Pressed!'));
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
-            },
+          ElevatedButton(onPressed: (){
+            final dsrghs =SnackBar(content: Text('I am OK'),);
 
+            // final snackBar = SnackBar(
+            //   content: const Text('Yay! A SnackBar!'),
+            //   action: SnackBarAction(
+            //     label: 'Undo',
+            //     onPressed: () {
+            //       // Some code to undo the change.
+            //     },
+            //   ),
+            // );
 
-
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-            child: Text('Press Me'),
-
+            // Find the ScaffoldMessenger in the widget tree
+            // and use it to show a SnackBar.
+            ScaffoldMessenger.of(context).showSnackBar(dsrghs);
+          },
+            child: Text('Oress Me'),
           ),
         ],
       ),
     );
   }
 }
+
+
